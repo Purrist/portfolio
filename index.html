@@ -3,45 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      display: flex;
-      justify-content: center;
-    }
-    #viewer {
-      max-width: 1920px;
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    #viewer img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      background: #fff;
-    }
-  </style>
+  <meta http-equiv="refresh" content="0; url=web/viewer.html">
+  <title>作品集</title>
 </head>
 <body>
-  <div id="viewer"></div>
-
-  <script>
-    const viewer = document.getElementById("viewer");
-    const totalPages = 20; // 修改为你的实际页数
-
-    for (let i = 1; i <= totalPages; i++) {
-      const img = document.createElement("img");
-      img.src = `pages_compressed/page_${i}.png`;
-      img.alt = `Page ${i}`;
-      viewer.appendChild(img);
-    }
-  </script>
+  <p>正在打开作品集，请稍候...</p>
 </body>
 </html>
