@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>作品集</title>
-<style>
-body { margin:0; padding:0; text-align:center; background:#f5f5f5; }
-img { max-width:100%; height:auto; display:block; margin:10px auto; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+    }
+    #viewer {
+      max-width: 1920px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    #viewer img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+  </style>
 </head>
 <body>
-  <img src="pages\page_1.png" alt="page_1.png">
-  <img src="pages\page_2.png" alt="page_2.png">
-  <img src="pages\page_3.png" alt="page_3.png">
-  <img src="pages\page_4.png" alt="page_4.png">
-  <img src="pages\page_5.png" alt="page_5.png">
-  <img src="pages\page_6.png" alt="page_6.png">
-  <img src="pages\page_7.png" alt="page_7.png">
-  <img src="pages\page_8.png" alt="page_8.png">
-  <img src="pages\page_9.png" alt="page_9.png">
-  <img src="pages\page_10.png" alt="page_10.png">
-  <img src="pages\page_11.png" alt="page_11.png">
-  <img src="pages\page_12.png" alt="page_12.png">
-  <img src="pages\page_13.png" alt="page_13.png">
-  <img src="pages\page_14.png" alt="page_14.png">
-  <img src="pages\page_15.png" alt="page_15.png">
-  <img src="pages\page_16.png" alt="page_16.png">
-  <img src="pages\page_17.png" alt="page_17.png">
-  <img src="pages\page_18.png" alt="page_18.png">
-  <img src="pages\page_19.png" alt="page_19.png">
-  <img src="pages\page_20.png" alt="page_20.png">
+  <div id="viewer"></div>
+
+  <script>
+    const viewer = document.getElementById("viewer");
+    const totalPages = 20; // 修改为你的实际页数
+
+    for (let i = 1; i <= totalPages; i++) {
+      const img = document.createElement("img");
+      img.src = `pages_compressed/page_${i}.png`;
+      img.alt = `Page ${i}`;
+      viewer.appendChild(img);
+    }
+  </script>
 </body>
 </html>
